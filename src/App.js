@@ -172,11 +172,10 @@ function App() {
     <div className="App">
       <h1>Gestión de Solicitudes de Servicio</h1>
 
-      {error && <p style={{ color: 'red' }}>Error: {error}</p>}
-      {successMessage && <p style={{ color: 'green' }}>{successMessage}</p>}
-      
+      {error && <p className="message error">Error: {error}</p>}
+      {successMessage && <p className="message success">{successMessage}</p>}
       {(isLoading || isApproving || isAssigning) && !error && !successMessage && (
-        <p>
+        <p className="message loading">
           {isApproving ? 'Aprobando solicitud...' : 
            isAssigning ? 'Asignando artista...' :
            isLoading ? 'Cargando datos...' : 'Procesando...'}
@@ -234,7 +233,7 @@ function App() {
                       </>
                     )}
                     {prospect.skillMatches && prospect.skillMatches.length > 0 && (
-                      <div style={{marginTop: '5px', marginLeft: '15px'}}>
+                      <div className="skill-details-container" style={{marginTop: '5px', marginLeft: '15px'}}>
                         <strong>Coincidencias de Habilidades:</strong>
                         <ul>
                           {prospect.skillMatches.map(skill => 
@@ -250,7 +249,7 @@ function App() {
                       </div>
                     )}
                      {prospect.missingEssentialSkills && prospect.missingEssentialSkills.length > 0 && (
-                      <div style={{marginTop: '5px', marginLeft: '15px', color: 'red'}}>
+                      <div className="skill-details-container" style={{marginTop: '5px', marginLeft: '15px', color: 'red'}}>
                         <strong>Habilidades Esenciales Faltantes:</strong>
                         <ul>
                           {prospect.missingEssentialSkills.map(skill => 
@@ -303,7 +302,7 @@ function App() {
           setSuccessMessage(null); 
           setError(null); 
           fetchPendingRequests(); 
-        }} style={{marginTop: '20px'}}>
+        }} className="view-other-requests-button" style={{marginTop: '20px'}}>
           Ver Otras Solicitudes Pendientes
         </button>
       )}

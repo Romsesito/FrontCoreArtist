@@ -1,7 +1,167 @@
 .App {
+  max-width: 950px; /* Slightly wider for more content */
+  margin: 20px auto; /* Add some margin from the top/bottom */
+  padding: 25px;
+  text-align: left;
+  font-size: 16px;
+  background-color: #fff; /* Give the app container a background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* A bit more pronounced shadow */
+}
+
+.App h1 {
+  color: #1a2533; /* Darker, more professional blue */
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 2.2em; /* Larger main heading */
+}
+
+.App h2 {
+  color: #2c3e50; /* Consistent subheading color */
+  border-bottom: 2px solid #dfe6e9; /* Lighter, softer underline */
+  padding-bottom: 12px;
+  margin-top: 45px; /* More space above subheadings */
+  margin-bottom: 25px;
+  font-size: 1.8em;
+}
+
+.App section {
+  background-color: #fdfdfd; /* Very light gray for sections, or keep white if preferred */
+  padding: 25px;
+  border-radius: 6px;
+  border: 1px solid #ecf0f1; /* Subtle border for sections */
+  margin-bottom: 35px;
+}
+
+.App ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.App li {
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 18px;
+  margin-bottom: 12px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.App li:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Add hover effect to list items */
+}
+
+.App li strong {
+  color: #333;
+}
+
+.App button {
+  background-color: #007bff; /* Standard Bootstrap blue */
+  color: white;
+  border: none;
+  padding: 12px 18px; /* Slightly larger padding */
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: 500; /* Medium font weight */
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  align-self: flex-start;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.App button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.App button:disabled {
+  background-color: #c0c0c0; /* Lighter gray for disabled */
+  color: #666666;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* "Ver Otras Solicitudes Pendientes" button */
+.App > button.view-other-requests-button { /* Add a class for more specific styling */
+  display: block;
+  margin: 40px auto 20px;
+  background-color: #28a745; /* Bootstrap success green */
+  padding: 12px 25px; /* More padding for a primary action button */
+}
+
+.App > button.view-other-requests-button:hover {
+  background-color: #1e7e34; /* Darker green */
+}
+
+/* Message Styling */
+.message {
+  padding: 15px;
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  font-size: 1.05em;
+}
+
+.message.error {
+  background-color: #f8d7da; /* Bootstrap error background */
+  color: #721c24; /* Bootstrap error text */
+  border-color: #f5c6cb; /* Bootstrap error border */
+}
+
+.message.success {
+  background-color: #d4edda; /* Bootstrap success background */
+  color: #155724; /* Bootstrap success text */
+  border-color: #c3e6cb; /* Bootstrap success border */
+}
+
+.message.loading { /* For loading messages */
+  background-color: #e2e3e5;
+  color: #383d41;
+  border-color: #d6d8db;
   text-align: center;
 }
 
+
+.App p {
+  line-height: 1.65;
+  margin-bottom: 12px;
+  color: #454545; /* Slightly softer text color */
+}
+
+/* Skill details styling */
+.skill-details-container {
+  padding: 12px;
+  background-color: #f7f9fa; /* Light background for skill details */
+  border-radius: 4px;
+  margin-top: 12px !important;
+  border: 1px solid #e9ecef;
+}
+
+.skill-details-container strong {
+  display: block;
+  margin-bottom: 8px;
+  color: #343a40;
+}
+
+.skill-details-container ul {
+  margin-top: 8px;
+  padding-left: 20px;
+  list-style-type: disc;
+}
+
+.skill-details-container li {
+  background-color: transparent;
+  border: none;
+  padding: 6px 0;
+  margin-bottom: 3px;
+  font-size: 0.95em;
+}
+
+/* Remove default CRA styles if not used, or integrate them if needed */
+/*
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,3 +196,4 @@
     transform: rotate(360deg);
   }
 }
+*/
